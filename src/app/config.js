@@ -1,15 +1,16 @@
-const dotenv= require('dotenv')
+const dotenv = require("dotenv");
 
-const fs= require('fs')
-const path=require('path')
+const fs = require("fs");
+const path = require("path");
 
-dotenv.config()
+dotenv.config();
 
-const privateKey= fs.readFileSync( path.resolve(__dirname,'./keys/private.key') )
-const publicKey=fs.readFileSync( path.resolve(__dirname,'./keys/public.key'))
+const privateKey = fs.readFileSync(
+  path.resolve(__dirname, "./keys/private.key")
+);
+const publicKey = fs.readFileSync(path.resolve(__dirname, "./keys/public.key"));
 
-
-module.exports=  {
+module.exports = {
   APP_HOST,
   APP_PORT,
   MYSQL_HOST,
@@ -17,11 +18,7 @@ module.exports=  {
   MYSQL_DATABASE,
   MYSQL_USER,
   MYSQL_PASSWORD,
-  APP_HOST,
-  APP_PORT
-}=process.env
+} = process.env;
 
-
-module.exports.privateKey=privateKey
-module.exports.publicKey=publicKey
-
+module.exports.privateKey = privateKey;
+module.exports.publicKey = publicKey;
